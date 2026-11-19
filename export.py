@@ -4,6 +4,7 @@ import io
 
 
 def export(rows):
+    # Use newline="" so csv can handle line endings itself.
     output = io.StringIO(newline="")
     writer = csv.writer(output)
     writer.writerow(["id", "name"])
